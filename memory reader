@@ -1,0 +1,7 @@
+import psutil
+p = psutil.virtual_memory()
+#1 GB = 1024 × 1024 × 1024 Bytes
+print("Memory of RAM:", round(p.total / (1024**3), 2), "GB")
+print("Availability of RAM:", round(p.available / (1024**3), 2), "GB")
+print("RAM in use:", round(p.used / (1024**3), 2), "GB")
+print("RAM Usage:", p.percent, "%")
