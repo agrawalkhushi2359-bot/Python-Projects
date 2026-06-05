@@ -1,0 +1,14 @@
+import pywhatkit
+import random
+import time
+import pyautogui
+wishes = ["Happiest birthday 😎","Have a great birthday 😏","Have a next step towards maturity 😂"]
+number = "+91xxxxxxxxxx"
+lenght_of_total_messages = 10
+gap_of_seconds = 10
+for i in range(lenght_of_total_messages):
+    message = random.choice(wishes)
+    pywhatkit.sendwhatmsg_instantly(number, message, True)
+    time.sleep(gap_of_seconds)
+    pyautogui.press('enter')
+    time.sleep(gap_of_seconds)
