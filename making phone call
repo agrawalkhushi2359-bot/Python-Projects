@@ -1,0 +1,14 @@
+from twilio.rest import Client
+
+# Twilio credentials
+account_sid = "sid"
+auth_token = "token"
+client = Client(account_sid, auth_token)
+
+call = client.calls.create(
+    to="receiver number",        # Receiver number
+    from_="twilio no.",       # Twilio number
+    twiml="<Response><Say>Hello! This is a Python automated call.</Say></Response>"
+)
+
+print("Call SID:", call.sid)
