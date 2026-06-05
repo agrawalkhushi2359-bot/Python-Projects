@@ -1,0 +1,21 @@
+from instagrapi import Client
+USERNAME = "username"
+PASSWORD = "password"
+IMAGE_PATH = r"C:\Users\agraw\OneDrive\Desktop\ai image.webp"
+CAPTION = """
+Hello Instagram 🚀
+
+Posted using Python.
+"""
+try:
+    cl = Client()
+    cl.login(USERNAME, PASSWORD)
+    media = cl.photo_upload(
+        path=IMAGE_PATH,
+        caption=CAPTION
+    )
+    print("✅ Photo uploaded successfully!")
+    print("Media ID:", media.pk)
+except Exception as e:
+    print("❌ Error:", e)
+    print("❌ Error:", e)
