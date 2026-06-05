@@ -1,0 +1,6 @@
+import smtplib
+s = smtplib.SMTP("smtp.gmail.com", 587)
+s.starttls()
+s.login("agrawalkhushi2359@gmail.com", "oaafnyijpxptcrpq")
+s.sendmail("agrawalkhushi2359@gmail.com","agrawalkhushi@gmail.com","Hello from Python!")
+s.quit()
