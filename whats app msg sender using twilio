@@ -1,0 +1,15 @@
+from twilio.rest import Client
+
+# Twilio credentials
+account_sid = "sid"
+auth_token = "token"
+
+client = Client(account_sid, auth_token)
+
+message = client.messages.create(
+    from_="whatsapp:twilio sandbox number",   # Twilio sandbox number
+    body="Hello! WhatsApp message from Python 🚀",
+    to="whatsapp:receiver no."      # receiver number
+)
+
+print("Message SID:", message.sid)
